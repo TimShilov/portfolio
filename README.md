@@ -1,11 +1,2 @@
-# Gulp Boilerplate
+# Example Portfolio
 
-### Instructions
-
-```
-npm install
-```
-
-```
-gulp
-```

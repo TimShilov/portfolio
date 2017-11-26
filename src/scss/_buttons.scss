@@ -1,0 +1,23 @@
+a.button,
+[type=button],
+[type=submit] {
+  display: inline-block;
+  -webkit-appearance: none;
+  transition: background 500ms ease;
+  background-image: linear-gradient(to right, $primary 0%, $secondary 51%, $primary 100%);
+  background-size: 300% auto;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, .05);
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    background-position: right center;
+  }
+}

@@ -48,20 +48,21 @@ h5 {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  max-width: 90vw;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
   font-size: 1.25rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   h2 {
     font-size: 2.25rem;
@@ -77,9 +78,57 @@ a:hover {
   text-decoration: underline;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.1rem;
+  text-align: left;
+  background: #fff;
+  border-radius: 6px;
+}
+
+table a {
+  font-weight: 800;
+  color: #1d1e25;
+  font-size: 1.25rem;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+
+tbody tr:hover {
+  background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
+  background: linear-gradient(to top right, #f6f6f7, #fefefe);
+}
+
+th {
+  background: #1d1e25;
+  color: #bec6d5;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #ebecec;
+  font-weight: 400;
+}
+
+td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #ebecec;
+  color: #858787;
+}
+
+tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
 /* Containers */
 .container, .small-container {
-  max-width: 1100px;
+  max-width: 1050px;
   padding: 0 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -89,7 +138,7 @@ a:hover {
   max-width: 650px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .container, .small-container,
   .small-container {
     padding: 0 2rem;
@@ -118,7 +167,8 @@ a:hover {
 }
 
 .site-hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin: 2.5rem 0;
   color: #bec6d5;
 }
 
@@ -127,6 +177,7 @@ a:hover {
 }
 
 .site-hero a {
+  font-weight: 800;
   color: #68c7fd;
 }
 
@@ -135,12 +186,12 @@ a:hover {
   color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .site-hero {
     padding: 6rem 0;
   }
   .site-hero p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -156,10 +207,9 @@ a:hover {
 
 .section-header p {
   color: #858787;
-  font-size: 1.1rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .section {
     padding: 4rem 0;
   }
@@ -167,7 +217,7 @@ a:hover {
     margin-bottom: 4rem;
   }
   .section-header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -220,9 +270,10 @@ a:hover {
 
 .skills .card img {
   max-width: 50px;
+  border-radius: 6px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .skills .card {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 calc(25% - 1rem);
@@ -243,16 +294,12 @@ a:hover {
 .job:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .job-title {
   text-align: center;
   padding-bottom: 2rem;
-}
-
-.job-company {
-  text-align: center;
-  display: inline-block;
 }
 
 .job-company .dates {
@@ -281,7 +328,7 @@ a:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 200px;
     flex: 0 1 200px;
-    margin: 0 4rem 0 0;
+    margin: 0 6rem 0 0;
   }
   .job-description {
     -webkit-box-flex: 1;
@@ -308,25 +355,33 @@ a:hover {
 }
 
 .portfolio .card {
-  padding: 2rem;
+  padding: 1.5rem;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .portfolio .card {
-    overflow: hidden;
     padding: 2rem;
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 calc(33% - 1rem);
-    flex: 1 1 calc(33% - 1rem);
+    -ms-flex: 1 1 calc(50% - 1rem);
+    flex: 1 1 calc(50% - 1rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .portfolio .card {
+    padding: 3rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 calc(33% - 1rem);
+    flex: 1 1 calc(33% - 1rem);
   }
 }
 
@@ -352,7 +407,7 @@ a:hover {
   font-weight: 400;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .site-footer {
     padding: 4rem 0;
   }
@@ -372,14 +427,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-#skills,
-#experience,
-#portfolio,
-#contact {
-  padding: 6rem 0;
-  margin-top: -2rem;
-}
-
 .site-navigation {
   position: fixed;
   top: 0;
@@ -394,7 +441,7 @@ a:hover {
 
 .nav-container {
   height: 60px;
-  max-width: 1100px;
+  max-width: 1050px;
   padding: 0 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -483,7 +530,7 @@ a:hover {
   margin-left: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .nav-toggle,
   .nav-mobile-header {
     display: none;
@@ -499,7 +546,7 @@ a:hover {
     background: transparent;
   }
   .nav-menu a {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
     color: #bec6d5;
     font-size: 1.1rem;
   }
@@ -511,7 +558,8 @@ a:hover {
 
 a.button,
 [type=button],
-[type=submit] {
+[type=submit],
+button {
   display: inline-block;
   -webkit-appearance: none;
   -webkit-transition: background 500ms ease;
@@ -527,16 +575,33 @@ a.button,
   padding: 1rem 1.75rem;
   font-size: 1.1rem;
   font-weight: 700;
-  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.05);
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 a.button:hover,
 [type=button]:hover,
-[type=submit]:hover {
+[type=submit]:hover,
+button:hover {
   text-decoration: none;
   background-position: right center;
+}
+
+.button-secondary,
+a.button-secondary {
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(255, 255, 255, 0.01)), to(rgba(255, 255, 255, 0.05)));
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.05));
+}
+
+.button-secondary:hover,
+a.button-secondary:hover {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.03)), to(rgba(255, 255, 255, 0.07)));
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.07));
 }
 
 label {

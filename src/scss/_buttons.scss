@@ -1,6 +1,7 @@
 a.button,
 [type=button],
-[type=submit] {
+[type=submit],
+button {
   display: inline-block;
   -webkit-appearance: none;
   transition: background 500ms ease;
@@ -14,10 +15,22 @@ a.button,
   padding: 1rem 1.75rem;
   font-size: 1.1rem;
   font-weight: 700;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, .05);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, .1);
   cursor: pointer;
   &:hover {
     text-decoration: none;
     background-position: right center;
+  }
+}
+
+.button-secondary,
+a.button-secondary {
+  color: rgba(255, 255, 255, .8);
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: linear-gradient(to top right, rgba(255, 255, 255, .01), rgba(255, 255, 255, .05));
+  &:hover {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, .03), rgba(255, 255, 255, .07));
   }
 }

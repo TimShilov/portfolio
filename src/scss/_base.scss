@@ -48,11 +48,12 @@ h5 {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  max-width: 90vw;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -61,7 +62,7 @@ h3 {
 
 @media screen and (min-width: $medium-screen) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   h2 {
     font-size: 2.25rem;
@@ -74,6 +75,52 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.1rem;
+  text-align: left;
+  background: #fff;
+  border-radius: 6px;
+  a {
+    font-weight: 800;
+    color: $dark;
+    font-size: 1.25rem;
+  }
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+
+tbody tr:hover {
+  background: $alternate-background;
+}
+
+th {
+  background: $dark;
+  color: $light;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid $border-color;
+  font-weight: 400;
+}
+
+td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid $border-color;
+  color: $medium;
+}
+
+tbody > tr:last-child > td {
+  border-bottom: 0;
 }
 
 
@@ -102,7 +149,7 @@ a {
 /* Hero */
 
 .site-hero {
-  margin-top: 60px; 
+  margin-top: 60px;
   background: linear-gradient(to bottom right, $medium-dark, lighten($medium-dark, 7%));
   text-align: center;
   display: flex;
@@ -114,13 +161,15 @@ a {
     color: #fff;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin: 2.5rem 0;
     color: $light;
     &:last-of-type {
       margin-bottom: 0;
     }
   }
   a {
+    font-weight: 800;
     color: lighten($primary, 7%);
     &:hover {
       text-decoration: none;
@@ -133,7 +182,7 @@ a {
   .site-hero {
     padding: 6rem 0;
     p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -150,7 +199,6 @@ a {
   margin-bottom: $space-mobile;
   p {
     color: $medium;
-    font-size: 1.1rem;
   }
 }
 
@@ -161,7 +209,7 @@ a {
   .section-header {
     margin-bottom: $space;
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 }
@@ -203,6 +251,7 @@ a {
     flex: 1 1 calc(50% - 1rem);
     img {
       max-width: 50px;
+      border-radius: $border-radius;
     }
   }
 }
@@ -225,6 +274,7 @@ a {
   &:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -234,8 +284,6 @@ a {
 }
 
 .job-company {
-  text-align: center;
-  display: inline-block;
   .dates {
     font-size: 1.1rem;
   }
@@ -259,7 +307,7 @@ a {
   .job-title {
     text-align: left;
     flex: 0 1 200px;
-    margin: 0 4rem 0 0;
+    margin: 0 6rem 0 0;
   }
   .job-description {
     flex: 1;
@@ -283,17 +331,23 @@ a {
 }
 
 .portfolio .card {
-  padding: 2rem;
+  padding: 1.5rem;
   flex: 1 1 100%;
 }
 
 @media screen and (min-width: $medium-screen) {
   .portfolio .card {
-    overflow: hidden;
     padding: 2rem;
-    flex: 1 1 calc(33% - 1rem);
+    flex: 1 1 calc(50% - 1rem);
     display: flex;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: $large-screen) {
+  .portfolio .card {
+    padding: 3rem;
+    flex: 1 1 calc(33% - 1rem);
   }
 }
 
@@ -335,12 +389,4 @@ a {
   p {
     margin-bottom: 0;
   }
-}
-
-#skills,
-#experience,
-#portfolio,
-#contact  {
-  padding: 6rem 0;
-  margin-top: -2rem; 
 }
